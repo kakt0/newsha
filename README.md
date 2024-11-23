@@ -61,30 +61,33 @@ catkin_make
 mkdir catkin_point_lio_unilidar/src/point_lio_unilidar/PCD
 ```
 
-Run `unilidar`:
+Запуск `unilidar`, проводить его из папки unilidar_sdk/unitree_lidar_ros:
 ```
 cd unilidar_sdk/unitree_lidar_ros
-
+```
+Один раз за сеанс в этой папке нужно сделать (+можно начать с повтора этой команды, если что-то идет не так):
+```
 source devel/setup.bash
-
+```
+Запуск лидара без подключения rviz:
+```
 roslaunch unitree_lidar_ros run_without_rviz.launch
 ```
 
-Run `Point-LIO` (вариант для последней сборки программ):
+Запуск `Point-LIO` (вариант для последней сборки программ), делать из другого терминала, из папки unilidar_sdk/unitree_lidar_ros/catkin_unilidar_point_lio:
 ```
 cd catkin_unilidar_point_lio
-
+```
+Один раз за сеанс в этой папке нужно сделать (+можно начать с повтора этой команды, если что-то идет не так):
+```
 source devel/setup.bash
-
+```
+Запуск rviz и программы по построению облака точек:
+```
 roslaunch point_lio_unilidar mapping_unilidar_l1.launch 
 ```
-
-Если есть какие-то проблеммы с launch-файлом, попробовать запустить:
+Если есть какие-то проблеммы с launch-файлом, то возможно была загружена старая версия репозитория, можно попробовать запустить:
 ```
-cd catkin_unilidar_point_lio
-
-source devel/setup.bash
-
 roslaunch point_lio_unilidar mapping_unilidar.launch 
 ```
 
@@ -94,22 +97,20 @@ roslaunch point_lio_unilidar mapping_unilidar.launch
 Пример такой записи:
 - [unilidar-2023-09-22-12-42-04.bag - Download](https://oss-global-cdn.unitree.com/static/unilidar-2023-09-22-12-42-04.zip)
 
-
-Run `Point-LIO`:
+Запуск `Point-LIO` (вариант для последней сборки программ), делать из другого терминала, из папки unilidar_sdk/unitree_lidar_ros/catkin_unilidar_point_lio:
 ```
-cd catkin_point_lio_unilidar
-
+cd catkin_unilidar_point_lio
+```
+Один раз за сеанс в этой папке нужно сделать (+можно начать с повтора этой команды, если что-то идет не так):
+```
 source devel/setup.bash
-
+```
+Запуск rviz и программы по построению облака точек:
+```
 roslaunch point_lio_unilidar mapping_unilidar_l1.launch 
 ```
-
-Либо:
+Если есть какие-то проблеммы с launch-файлом, то возможно была загружена старая версия репозитория, можно попробовать запустить:
 ```
-cd catkin_point_lio_unilidar
-
-source devel/setup.bash
-
 roslaunch point_lio_unilidar mapping_unilidar.launch 
 ```
 
