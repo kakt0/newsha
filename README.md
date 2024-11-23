@@ -60,7 +60,6 @@ catkin_make
 ```
 mkdir catkin_point_lio_unilidar/src/point_lio_unilidar/PCD
 ```
-
 Запуск `unilidar`, проводить его из папки unilidar_sdk/unitree_lidar_ros:
 ```
 cd unilidar_sdk/unitree_lidar_ros
@@ -72,6 +71,11 @@ source devel/setup.bash
 Запуск лидара без подключения rviz:
 ```
 roslaunch unitree_lidar_ros run_without_rviz.launch
+```
+
+При возникновении ошибки, связанной с нахождением лидара можно попробовать:
+```
+sudo chmod 666 /dev/ttyUSB0
 ```
 
 Запуск `Point-LIO` (вариант для последней сборки программ), делать из другого терминала, из папки unilidar_sdk/unitree_lidar_ros/catkin_unilidar_point_lio:
