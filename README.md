@@ -151,3 +151,8 @@ ros2 launch unitree_lidar_ros2 launch.py
 ros2 run raspberry_camera raspberry_camera
 ```
 
+From dir /unilidar_sdk/unitree_lidar_ros/catkin_point_lio_unilidar/devel/lib/point_lio_unilidar:
+```
+./listener
+```
+
