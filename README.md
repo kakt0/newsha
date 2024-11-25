@@ -143,10 +143,11 @@ source install/setup.bash
 ```
 ros2 launch unitree_lidar_ros2 launch.py
 ```
+## 4.2 Запуск программы на компьютере 
 
 # 5.
 
 ```
 ros2 run raspberry_camera raspberry_camera
 ```
-## 4.2 Запуск программы на компьютере 
+
