@@ -144,6 +144,30 @@ source install/setup.bash
 ros2 launch unitree_lidar_ros2 launch.py
 ```
 ## 4.2 Запуск программы на компьютере 
+Сначала в одном терминале запускаем roscore:
+```
+source /opt/ros/noetic/setup.bash
+roscore
+```
+Запуск `Point-LIO` (вариант для последней сборки программ), делать из другого терминала, из папки unilidar_sdk/unitree_lidar_ros/catkin_unilidar_point_lio:
+```
+cd catkin_unilidar_point_lio
+```
+Один раз за сеанс в этой папке нужно сделать (+можно начать с повтора этой команды, если что-то идет не так):
+```
+source /opt/ros/noetic/setup.bash
+```
+```
+source devel/setup.bash
+```
+Запуск rviz и программы по построению облака точек:
+```
+roslaunch point_lio_unilidar mapping_unilidar_l1.launch 
+```
+Если есть какие-то проблеммы с launch-файлом, то возможно была загружена старая версия репозитория, можно попробовать запустить:
+```
+roslaunch point_lio_unilidar mapping_unilidar.launch 
+```
 
 # 5. Запуск распознавания AruCo-меток на малинке
 Из /ros_project:
