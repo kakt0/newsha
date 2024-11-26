@@ -145,13 +145,25 @@ ros2 launch unitree_lidar_ros2 launch.py
 ```
 ## 4.2 Запуск программы на компьютере 
 
-# 5.
-
+# 5. Запуск распознавания AruCo-меток на малинке
+Из /ros_project:
+```
+cd ros_project
+```
+Выполнить один раз за сеанс:
+```
+source install/setup.bash
+```
+Для запуска программы выполнить (из того же репозитория):
 ```
 ros2 run raspberry_camera raspberry_camera
 ```
 
-From dir /unilidar_sdk/unitree_lidar_ros/catkin_point_lio_unilidar/devel/lib/point_lio_unilidar:
+# 6. Тестовый запуск программы для соединения камер и лидара
+Выполнить стандартный launch для запуска программы создания облака точек, затем в директории /unilidar_sdk/unitree_lidar_ros/catkin_point_lio_unilidar/devel/lib/point_lio_unilidar вызвать:
+```
+cd /unilidar_sdk/unitree_lidar_ros/catkin_point_lio_unilidar/devel/lib/point_lio_unilidar
+```
 ```
 ./listener
 ```
