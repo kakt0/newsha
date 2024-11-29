@@ -152,6 +152,7 @@ roscore
 В другом терминале запускаем мост (у меня он находится в папке /ros2_project):
 ```
 source /opt/ros/noetic/setup.bash
+source ~/newsha_ros/src/unilidar_sdk/unitree_lidar_ros/catkin_point_lio_unilidar/devel/setup.bash
 source /opt/ros/foxy/setup.bash
 source install/setup.bash
 ros2 run ros1_bridge dynamic_bridge
