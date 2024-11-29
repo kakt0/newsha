@@ -149,6 +149,14 @@ ros2 launch unitree_lidar_ros2 launch.py
 source /opt/ros/noetic/setup.bash
 roscore
 ```
+В другом терминале запускаем мост (у меня он находится в папке /ros2_project):
+```
+source /opt/ros/noetic/setup.bash
+source /opt/ros/foxy/setup.bash
+source install/setup.bash
+ros2 run ros1_bridge dynamic_bridge
+```
+
 Запуск `Point-LIO` (вариант для последней сборки программ), делать из другого терминала, из папки unilidar_sdk/unitree_lidar_ros/catkin_unilidar_point_lio:
 ```
 cd catkin_unilidar_point_lio
